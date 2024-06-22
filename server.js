@@ -1,6 +1,11 @@
-import wokeDyno from "woke-dyno";
-const SELF_URL = "https://hotdogisasandwich.com";
-const dynoWaker = wokeDyno(SELF_URL);
+const wokeDyno = require("woke-dyno");
+const SELF_URL = "https://cors-anywhere-rb.onrender.com";
+const dynoWaker = wokeDyno({
+  url: SELF_URL,  // url string
+  interval: 1000 * 60 * 1, // interval in milliseconds (1 minutes in this example)
+  startNap: [5, 0, 0, 0], // the time to start nap in UTC, as [h, m, s, ms] (05:00 UTC in this example)
+  endNap: [9, 59, 59, 999] // time to wake up again, in UTC (09:59:59.999 in this example)
+});
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
