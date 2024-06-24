@@ -1,5 +1,5 @@
 const wokeDyno = require("woke-dyno");
-const SELF_URL = "https://cors-anywhere-rb.onrender.com";
+const SELF_URL = "https://cors-anywhere-rb-code.onrender.com";
 const dynoWaker = wokeDyno({
   url: SELF_URL,  // url string
   interval: 1000 * 60 * 1, // interval in milliseconds (1 minutes in this example)
